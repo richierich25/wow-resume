@@ -1,0 +1,41 @@
+<nav class="navbar navbar-expand navbar-light bg-primary d-flex justify-content-between">
+  <div class="navbar-brand mb-0 h1 text-white">HOTSHOT RESUME</div>
+  <div class="mb-0 h1 text-white">
+    <!-- Normal Online Fontawesome
+    <a href="javascript:void(0)" class="text-white h3 mr-3" title="GitHub"><i class="fab fa-github"></i></a>
+    <a href="javascript:void(0)" title="Blog" class="text-white h3"><i class="fas fa-globe"></i></a>
+    -->
+
+    <!-- Using Fontawesome embedded with Angular
+    coffee is available by embedding `library.addIcons(faCoffee)` in the app.module and thus we can use just icon="coffee"-->
+
+    <!-- fas is default prefix -->
+    <!--
+    <a href="javascript:void(0)" title="Blog" class="text-white h3 mr-3"><fa-icon icon="coffee"></fa-icon></a>
+    <a href="javascript:void(0)" class="text-white h3 mr-3" title="GitHub"><fa-icon [icon]="['fas', 'coffee']"></fa-icon></a>
+    -->
+
+    <!-- Icon animations -->
+    <!--
+    <a href="javascript:void(0)" title="Blog" class="text-white h3 mr-3"><fa-icon [icon]="faSpinner" [spin]="true"></fa-icon></a>
+    <a href="javascript:void(0)" title="Blog" class="text-white h3  mr-3"><fa-icon [icon]="faSpinner" [pulse]="true"></fa-icon></a>
+    <a href="javascript:void(0)" title="Blog" class="text-white h3 mr-3"><fa-icon [icon]="['fas', 'sync']" [spin]="true"></fa-icon></a>
+    <a href="javascript:void(0)" title="Blog" class="text-white h3 mr-3"><fa-icon icon="sync" [pulse]="true"></fa-icon></a>
+    -->
+
+    <!-- Envelope with 100+ content written on it
+    <fa-layers size="xs">
+      <fa-icon [icon]="['fas', 'envelope']"></fa-icon>
+      <fa-layers-counter content="100+"></fa-layers-counter>
+    </fa-layers>
+    -->
+    
+    <a href="javascript:void(0)" class="text-white h3 mr-3" title="GitHub"><fa-icon [icon]="faGithub"></fa-icon></a>
+    <a href="javascript:void(0)" title="Blog" class="text-white h3"><fa-icon [icon]="'globe'" [pulse]="true"></fa-icon></a>
+
+    <!-- Using Material Design Icons-->
+    <!-- <mat-icon class="text-white h3">thumb_up</mat-icon> -->
+  </div>
+</nav>
+
+<router-outlet></router-outlet>

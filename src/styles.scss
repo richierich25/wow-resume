@@ -1,0 +1,173 @@
+/* You can add global styles to this file, and also import other style files */
+
+/* CSS for the Loading page*/
+
+* {
+  border-radius: 0 !important;
+}
+
+.cube-folding {
+  width: 100px; /* size of the container housing the cubes*/
+  height: 100px;
+  display: inline-block;
+  transform: rotate(
+    45deg
+  ); /* Inititially tilted 45 degress down with respect to x axis*/
+  font-size: 0;
+}
+.cube-folding span {
+  position: relative;
+  width: 50px;
+  height: 50px;
+  transform: scale(1.1);
+  display: inline-block;
+}
+/* code for the span and leaf1 */
+.cube-folding span::before {
+  content: "";
+  background-color: #a8c5ff;
+  position: absolute;
+  left: 0;
+  top: 0;
+  /* display: block; */
+  width: 50px;
+  height: 50px;
+  transform-origin: 100% 100%;
+  animation: folding 2.5s infinite linear both;
+}
+.cube-folding .leaf2 {
+  transform: rotateZ(90deg) scale(1.1);
+}
+.cube-folding .leaf2::before {
+  animation-delay: 0.3s;
+  background-color: #8197c2;
+}
+.cube-folding .leaf3 {
+  transform: rotateZ(270deg) scale(1.1);
+}
+.cube-folding .leaf3::before {
+  animation-delay: 0.9s;
+  background-color: #8197c2;
+}
+.cube-folding .leaf4 {
+  transform: rotateZ(180deg) scale(1.1);
+}
+.cube-folding .leaf4::before {
+  animation-delay: 0.6s;
+  background-color: #546380;
+}
+
+@keyframes folding {
+  0%,
+  10% {
+    transform: perspective(140px) rotateX(-180deg);
+    opacity: 0;
+  }
+  25%,
+  75% {
+    transform: perspective(140px) rotateX(0deg);
+    opacity: 1;
+  }
+  90%,
+  100% {
+    transform: perspective(140px) rotateY(180deg);
+    opacity: 0;
+  }
+}
+
+/* wrapper around the cube */
+.cube-wrapper {
+  position: fixed;
+  left: 50%;
+  top: 50%;
+  margin-top: -50px;
+  margin-left: -50px;
+  width: 150px;
+  height: 150px;
+  text-align: center;
+}
+/* shadow below the loading component */
+.cube-wrapper:after {
+  content: "";
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: -20px;
+  margin: auto;
+  width: 90px;
+  height: 6px;
+  background-color: rgba(0, 0, 0, 0.1);
+  filter: blur(2px);
+  border-radius: 100%;
+  z-index: 1;
+  animation: shadow 0.5s ease infinite alternate;
+}
+/* movement of the loading component from top to bottom */
+.cube-wrapper .loading {
+  font-size: 14px;
+  letter-spacing: 0.1em;
+  display: block;
+  color: #a8c5ff;
+  position: relative;
+  top: 25px;
+  z-index: 2;
+  animation: text 0.5s ease infinite alternate;
+}
+
+/* movement of text from top to bottom by shifting by 10px in total */
+@keyframes text {
+  100% {
+    top: 35px;
+  }
+}
+
+/* slight movement of the component below loading*/
+@keyframes shadow {
+  100% {
+    bottom: -18px;
+    width: 100px;
+  }
+}
+/* html, body {
+  min-height: 100%;
+} */
+
+.root-heading {
+  font-size: 30px;
+  display: block;
+  text-align: center;
+  /* color: #2A3140; */
+  color: #9bb5eb;
+  padding: 50px 20px;
+  font-weight: 300;
+  font-family: "Archivo Narrow", sans-serif;
+}
+
+.made-with-love {
+  position: fixed;
+  /* left: 0; */
+  width: 100%;
+  bottom: 10px;
+  text-align: center;
+  font-size: 20px;
+  z-index: 9999;
+  font-family: arial;
+  color: #9bb5eb;
+}
+.made-with-love i {
+  font-style: normal;
+  color: #f50057;
+  font-size: 20px;
+  position: relative;
+  top: 2px;
+}
+.made-with-love a {
+  color: #9bb5eb;
+  text-decoration: none;
+}
+.made-with-love a:hover {
+  text-decoration: underline;
+}
+
+html, body { height: 100%; }
+body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
