@@ -3,7 +3,7 @@
   "version": 1,
   "newProjectRoot": "projects",
   "projects": {
-    "WOW-RESUME": {
+    "wow-resume": {
       "projectType": "application",
       "schematics": {
         "@schematics/angular:component": {
@@ -72,18 +72,18 @@
         "serve": {
           "builder": "@angular-devkit/build-angular:dev-server",
           "options": {
-            "browserTarget": "WOW-RESUME:build"
+            "browserTarget": "wow-resume:build"
           },
           "configurations": {
             "production": {
-              "browserTarget": "WOW-RESUME:build:production"
+              "browserTarget": "wow-resume:build:production"
             }
           }
         },
         "extract-i18n": {
           "builder": "@angular-devkit/build-angular:extract-i18n",
           "options": {
-            "browserTarget": "WOW-RESUME:build"
+            "browserTarget": "wow-resume:build"
           }
         },
         "test": {
@@ -121,11 +121,11 @@
           "builder": "@angular-devkit/build-angular:protractor",
           "options": {
             "protractorConfig": "e2e/protractor.conf.js",
-            "devServerTarget": "WOW-RESUME:serve"
+            "devServerTarget": "wow-resume:serve"
           },
           "configurations": {
             "production": {
-              "devServerTarget": "WOW-RESUME:serve:production"
+              "devServerTarget": "wow-resume:serve:production"
             }
           }
         },
@@ -139,7 +139,7 @@
       }
     }
   },
-  "defaultProject": "WOW-RESUME",
+  "defaultProject": "wow-resume",
   "cli": {
     "analytics": false
   }

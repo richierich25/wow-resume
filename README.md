@@ -6,7 +6,7 @@
 ⚡️ Wow Resume ⚡️
 ======================
 
-<h4 align="center">
+<h4 align="center">A resume builder application built on Angular & Bootstrap
 </h4>
 
 <div align="center"> 
@@ -41,7 +41,7 @@
   <br>
 
   <p>
-    The application is powered by Github Actions to automatically push weather notification to a personal telegram bot at specific intervals. It is built on Javascript making use of NodeJS libraries. 
+    A resume builder application that allows users to quickly generate resume online by feeding the requisite data. The resume can be viewed online and allows for downloading as PDF. 
   </p>
   <br>
 
