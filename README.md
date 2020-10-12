@@ -26,7 +26,7 @@
       <a href="https://github.com/richierich25/wow-resume/stargazers">
       <img src="https://img.shields.io/github/stars/richierich25/wow-resume" alt="GitHub Stars">
     </a>
-    <img src="https://github.com/richierich25/wow-resume/workflows/Run%20Weather%20Bot/badge.svg" alt="Run Wow Resume">
+    <img src="https://github.com/richierich25/wow-resume/workflows/build/badge.svg" alt="Run Wow Resume">
   </p>
 
   <p align="center">
