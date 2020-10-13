@@ -32,8 +32,6 @@ jobs:
         run: ng build --prod
 
       - name: Deploy to gh-pages
-        uses: peaceiris/actions-gh-pages@v3
+        run: ng deploy
         with:
           github_token: ${{ secrets.GITHUB_TOKEN }}
-          publish_dir: ./dist/wow-resume
-          full_commit_message: ${{ github.event.head_commit.message }}
