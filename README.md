@@ -6,7 +6,7 @@
 ⚡️ Wow Resume ⚡️
 ======================
 
-<h4 align="center">A resume builder application built on Angular & Bootstrap1
+<h4 align="center">A resume builder application built on Angular & Bootstrap
 </h4>
 
 <div align="center"> 
