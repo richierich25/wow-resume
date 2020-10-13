@@ -1,0 +1,32 @@
+name: PR build
+
+on:
+  pull_request:
+    branches: [ main ]
+
+jobs:
+  pr-build:
+    name: Build Project
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout Repository
+        uses: actions/checkout@v2.3.3
+
+      - name: Setup Node Environment
+        uses: actions/setup-node@v2.1.2
+        with:
+          node-version: 14.13.0
+
+      - name: Cache dependencies
+        uses: actions/cache@v2
+        with:
+          path: ~/.npm
+          key: ${{ runner.os }}-node-${{ hashFiles('**/package-lock.json') }}
+          restore-keys: ${{ runner.os }}-node-
+
+      - name: Clean Install NPM Dependencies
+        run: npm ci
+
+      - name: Build Website
+        run: ng build --prod
