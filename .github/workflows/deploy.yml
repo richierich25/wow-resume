@@ -29,9 +29,9 @@ jobs:
         run: npm ci
 
       - name: Build Website
-        run: ng build --prod
+        run: npm run ng build --prod
 
       - name: Deploy to gh-pages
-        run: ng deploy
+        run: npm run ng deploy
         with:
           github_token: ${{ secrets.GITHUB_TOKEN }}
