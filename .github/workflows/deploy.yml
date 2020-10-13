@@ -31,7 +31,8 @@ jobs:
       - name: Build Website
         run: npm run ng build --prod
 
-      - name: Deploy to gh-pages
-        run: npm run ng deploy --name="richierich25" --email=richierich25@gmail.com
+      - name: Prepare and deploy
         env:
-          github_token: ${{ secrets.GH_TOKEN}}
+          GH_TOKEN: ${{ secrets.GH_TOKEN }}
+        run: |
+          npm run ng -- deploy --name="richierich25" --email=richierich25@gmail.com
