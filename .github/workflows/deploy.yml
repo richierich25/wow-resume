@@ -34,4 +34,4 @@ jobs:
       - name: Deploy to gh-pages
         run: npm run ng deploy --name="richierich25" --email=richierich25@gmail.com
         env:
-          github_token: ${{ secrets.GITHUB_TOKEN }}
+          github_token: ${{ secrets.GH_TOKEN}}
