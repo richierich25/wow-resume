@@ -5,6 +5,7 @@ import { BehaviorSubject } from 'rxjs';
 @Injectable({
   providedIn: 'root'
 })
+
 export class ResumeService {
   private _degrees: string[] = ['B.E.', 'M.E.', 'B.Com', 'M.Com'];
   // tslint:disable-next-line: max-line-length
@@ -20,7 +21,6 @@ export class ResumeService {
         new Skill('Motivated')]
   );
 
-  // tslint:disable-next-line: max-line-length
   resumeSub = new BehaviorSubject<Resume>(new Resume());
 
   constructor() { }

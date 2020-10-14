@@ -25,11 +25,21 @@ export class ScriptService {
 
   constructor() {  }
 
-  // method to load each script recursively by resolving all promises
-  load(...scriptsToLoad: string[]): Promise<any> {
-    const promises: Promise<any>[] = [];
-    scriptsToLoad.forEach(name => promises.push(this.loadScript(name)));
-    return Promise.all(promises);
+  // method that obtains a set of scripts to load dynamically
+  // to load each script parallely by resolving all promises
+  // commenting below since it allows for parallel promise resolving
+  // load(...scriptsToLoad: string[]): Promise<any> {
+  //   const promises: Promise<any>[] = [];
+  //   scriptsToLoad.forEach(name => promises.push(this.loadScript(name)));
+  //   return Promise.all(promises);
+  // }
+  load(...scriptsToLoadSequentially: string[]): void {
+      this.loadScript(scriptsToLoadSequentially[0])
+        .then((loadedFirstScript) => {
+          this.loadScript(scriptsToLoadSequentially[1]);
+        })
+        .then(loadedSecondScript => console.log('All script loaded sequentially'))
+        .catch(error => console.log(error));
   }
 
   // script loading logic
@@ -47,7 +57,7 @@ export class ScriptService {
         script.onload = () => {
           scriptToLoad.loaded = true;
           scriptToLoad.status = 'Loaded';
-          console.log(scriptToLoad);
+          // console.log(scriptToLoad);
           resolve(scriptToLoad);
         };
         script.onerror = (error: any) => {

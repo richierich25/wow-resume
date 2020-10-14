@@ -28,7 +28,7 @@ export class ResumeComponent implements OnInit, OnDestroy {
     this.resumeChangeSub = this.resumeService.resumeSub.subscribe((resume) => {
       this.resume = resume;
     });
-    // loading scripts for PDF report generation support
+    // loading scripts for PDF report generation support; pdfMake script must be before vfsFonts
     this.scriptService.load('pdfMake', 'vfsFonts');
   }
   setDummyValues(): void {
